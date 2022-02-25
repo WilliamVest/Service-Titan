@@ -1,0 +1,1963 @@
+{
+    "info": {
+        "_postman_id": "6be072f0-d303-403f-ae02-6abe1ccd0f2d",
+        "name": "Sales & Estimates",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "tenant/{tenant}/estimates",
+            "item": [
+                {
+                    "name": "{id}",
+                    "item": [
+                        {
+                            "name": "items",
+                            "item": [
+                                {
+                                    "name": "Estimates_PutItem",
+                                    "id": "739c94d7-2c8f-44ad-950b-fc77e5638194",
+                                    "protocolProfileBehavior": {
+                                        "disableBodyPruning": true
+                                    },
+                                    "request": {
+                                        "method": "PUT",
+                                        "header": [
+                                            {
+                                                "key": "Content-Type",
+                                                "value": "application/json"
+                                            },
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            }
+                                        ],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n  \"id\": 0,\n  \"skuId\": 0,\n  \"skuName\": \"string\",\n  \"parentItemId\": 0,\n  \"description\": \"string\",\n  \"isAddOn\": true,\n  \"quantity\": 0,\n  \"unitPrice\": 0,\n  \"skipUpdatingMembershipPrices\": true,\n  \"itemGroupName\": \"string\",\n  \"itemGroupRootId\": 0\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id/items",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "tenant",
+                                                ":tenant",
+                                                "estimates",
+                                                ":id",
+                                                "items"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "id": "0710717e-7451-4f70-9376-44ce6d7e5f06",
+                                                    "key": "id",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Format - int64."
+                                                },
+                                                {
+                                                    "id": "e984cbf5-fd1b-4717-93cb-1ce8b65dbbdf",
+                                                    "key": "tenant",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Tenant ID"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "response": [
+                                        {
+                                            "id": "f098583a-b751-4116-a4f1-2eb1e7b4c3b3",
+                                            "name": "The request has succeeded",
+                                            "originalRequest": {
+                                                "method": "PUT",
+                                                "header": [
+                                                    {
+                                                        "description": "Added as a part of security scheme: apikey",
+                                                        "key": "ST-App-Key",
+                                                        "value": "<API Key>"
+                                                    }
+                                                ],
+                                                "body": {
+                                                    "mode": "raw",
+                                                    "raw": "{\n  \"id\": 0,\n  \"skuId\": 0,\n  \"skuName\": \"string\",\n  \"parentItemId\": 0,\n  \"description\": \"string\",\n  \"isAddOn\": true,\n  \"quantity\": 0,\n  \"unitPrice\": 0,\n  \"skipUpdatingMembershipPrices\": true,\n  \"itemGroupName\": \"string\",\n  \"itemGroupRootId\": 0\n}",
+                                                    "options": {
+                                                        "raw": {
+                                                            "language": "json"
+                                                        }
+                                                    }
+                                                },
+                                                "url": {
+                                                    "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id/items",
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "path": [
+                                                        "tenant",
+                                                        ":tenant",
+                                                        "estimates",
+                                                        ":id",
+                                                        "items"
+                                                    ],
+                                                    "variable": [
+                                                        {
+                                                            "key": "id",
+                                                            "value": "-2055877",
+                                                            "description": "(Required) Format - int64."
+                                                        },
+                                                        {
+                                                            "key": "tenant",
+                                                            "value": "-2055877",
+                                                            "description": "(Required) Tenant ID"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "status": "OK",
+                                            "code": 200,
+                                            "_postman_previewlanguage": "json",
+                                            "header": [
+                                                {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                }
+                                            ],
+                                            "cookie": [],
+                                            "responseTime": null,
+                                            "body": "{\n  \"id\": 0,\n  \"sku\": {\n    \"id\": 0,\n    \"name\": \"string\",\n    \"displayName\": \"string\",\n    \"type\": \"string\",\n    \"soldHours\": 0,\n    \"generalLedgerAccountId\": 0,\n    \"generalLedgerAccountName\": \"string\",\n    \"modifiedOn\": \"string\"\n  },\n  \"skuAccount\": \"string\",\n  \"description\": \"string\",\n  \"qty\": 0,\n  \"unitRate\": 0,\n  \"total\": 0,\n  \"itemGroupName\": \"string\",\n  \"itemGroupRootId\": 0,\n  \"modifiedOn\": \"string\",\n  \"estimateId\": 0\n}"
+                                        },
+                                        {
+                                            "id": "7bd699f5-ac24-4c3d-8056-5d2be49fe21a",
+                                            "name": "The request cannot be processed, check validation errors or request format",
+                                            "originalRequest": {
+                                                "method": "PUT",
+                                                "header": [
+                                                    {
+                                                        "description": "Added as a part of security scheme: apikey",
+                                                        "key": "ST-App-Key",
+                                                        "value": "<API Key>"
+                                                    }
+                                                ],
+                                                "body": {
+                                                    "mode": "raw",
+                                                    "raw": "{\n  \"id\": 0,\n  \"skuId\": 0,\n  \"skuName\": \"string\",\n  \"parentItemId\": 0,\n  \"description\": \"string\",\n  \"isAddOn\": true,\n  \"quantity\": 0,\n  \"unitPrice\": 0,\n  \"skipUpdatingMembershipPrices\": true,\n  \"itemGroupName\": \"string\",\n  \"itemGroupRootId\": 0\n}",
+                                                    "options": {
+                                                        "raw": {
+                                                            "language": "json"
+                                                        }
+                                                    }
+                                                },
+                                                "url": {
+                                                    "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id/items",
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "path": [
+                                                        "tenant",
+                                                        ":tenant",
+                                                        "estimates",
+                                                        ":id",
+                                                        "items"
+                                                    ],
+                                                    "variable": [
+                                                        {
+                                                            "key": "id",
+                                                            "value": "-2055877",
+                                                            "description": "(Required) Format - int64."
+                                                        },
+                                                        {
+                                                            "key": "tenant",
+                                                            "value": "-2055877",
+                                                            "description": "(Required) Tenant ID"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "status": "Bad Request",
+                                            "code": 400,
+                                            "_postman_previewlanguage": "json",
+                                            "header": [
+                                                {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                }
+                                            ],
+                                            "cookie": [],
+                                            "responseTime": null,
+                                            "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 0,\n  \"traceId\": \"string\",\n  \"errors\": {},\n  \"data\": {}\n}"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "name": "Estimates_DeleteItem",
+                                    "id": "d72dd514-1a25-4901-9188-5f8c44a1dc7c",
+                                    "request": {
+                                        "method": "DELETE",
+                                        "header": [
+                                            {
+                                                "key": "Accept",
+                                                "value": "application/json"
+                                            }
+                                        ],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id/items/:itemId",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "tenant",
+                                                ":tenant",
+                                                "estimates",
+                                                ":id",
+                                                "items",
+                                                ":itemId"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "id": "73becdce-df20-45ff-8803-01a6eb548316",
+                                                    "key": "id",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Format - int64."
+                                                },
+                                                {
+                                                    "id": "7201bb59-16af-4615-a19e-86d112253483",
+                                                    "key": "itemId",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Format - int64."
+                                                },
+                                                {
+                                                    "id": "05de5646-ae55-44bd-b260-4b46e7ff8b4a",
+                                                    "key": "tenant",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Tenant ID"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "response": [
+                                        {
+                                            "id": "20ccd25a-11d7-4a2f-ae6e-963be4cae3cc",
+                                            "name": "The request has succeeded",
+                                            "originalRequest": {
+                                                "method": "DELETE",
+                                                "header": [
+                                                    {
+                                                        "description": "Added as a part of security scheme: apikey",
+                                                        "key": "ST-App-Key",
+                                                        "value": "<API Key>"
+                                                    }
+                                                ],
+                                                "url": {
+                                                    "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id/items/:itemId",
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "path": [
+                                                        "tenant",
+                                                        ":tenant",
+                                                        "estimates",
+                                                        ":id",
+                                                        "items",
+                                                        ":itemId"
+                                                    ],
+                                                    "variable": [
+                                                        {
+                                                            "key": "id",
+                                                            "value": "-2055877",
+                                                            "description": "(Required) Format - int64."
+                                                        },
+                                                        {
+                                                            "key": "itemId",
+                                                            "value": "-2055877",
+                                                            "description": "(Required) Format - int64."
+                                                        },
+                                                        {
+                                                            "key": "tenant",
+                                                            "value": "-2055877",
+                                                            "description": "(Required) Tenant ID"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "status": "OK",
+                                            "code": 200,
+                                            "_postman_previewlanguage": "text",
+                                            "header": [
+                                                {
+                                                    "key": "Content-Type",
+                                                    "value": "text/plain"
+                                                }
+                                            ],
+                                            "cookie": [],
+                                            "responseTime": null,
+                                            "body": ""
+                                        },
+                                        {
+                                            "id": "66e97515-f69b-4aa8-9b4a-12fbb1009552",
+                                            "name": "The request cannot be processed, check validation errors or request format",
+                                            "originalRequest": {
+                                                "method": "DELETE",
+                                                "header": [
+                                                    {
+                                                        "description": "Added as a part of security scheme: apikey",
+                                                        "key": "ST-App-Key",
+                                                        "value": "<API Key>"
+                                                    }
+                                                ],
+                                                "url": {
+                                                    "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id/items/:itemId",
+                                                    "host": [
+                                                        "{{baseUrl}}"
+                                                    ],
+                                                    "path": [
+                                                        "tenant",
+                                                        ":tenant",
+                                                        "estimates",
+                                                        ":id",
+                                                        "items",
+                                                        ":itemId"
+                                                    ],
+                                                    "variable": [
+                                                        {
+                                                            "key": "id",
+                                                            "value": "-2055877",
+                                                            "description": "(Required) Format - int64."
+                                                        },
+                                                        {
+                                                            "key": "itemId",
+                                                            "value": "-2055877",
+                                                            "description": "(Required) Format - int64."
+                                                        },
+                                                        {
+                                                            "key": "tenant",
+                                                            "value": "-2055877",
+                                                            "description": "(Required) Tenant ID"
+                                                        }
+                                                    ]
+                                                }
+                                            },
+                                            "status": "Bad Request",
+                                            "code": 400,
+                                            "_postman_previewlanguage": "json",
+                                            "header": [
+                                                {
+                                                    "key": "Content-Type",
+                                                    "value": "application/json"
+                                                }
+                                            ],
+                                            "cookie": [],
+                                            "responseTime": null,
+                                            "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 0,\n  \"traceId\": \"string\",\n  \"errors\": {},\n  \"data\": {}\n}"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "id": "d5ae54ce-a576-4ce5-899b-2cb339c081b6"
+                        },
+                        {
+                            "name": "Estimates_Get",
+                            "id": "9891eda6-68e2-4664-86f4-a03d4b4ea898",
+                            "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                            },
+                            "request": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "tenant",
+                                        ":tenant",
+                                        "estimates",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "tenant",
+                                            "value": "407573387",
+                                            "description": "(Required) Tenant ID"
+                                        },
+                                        {
+                                            "key": "id",
+                                            "value": "cid.jhhrbavb3yls8qgdgxxqqai1o",
+                                            "description": "(Required) Format - int64."
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "5698ce42-b225-47e6-ba45-931769ec8e93",
+                                    "name": "The request has succeeded",
+                                    "originalRequest": {
+                                        "method": "GET",
+                                        "header": [
+                                            {
+                                                "description": "Added as a part of security scheme: apikey",
+                                                "key": "ST-App-Key",
+                                                "value": "<API Key>"
+                                            }
+                                        ],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "tenant",
+                                                ":tenant",
+                                                "estimates",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Format - int64."
+                                                },
+                                                {
+                                                    "key": "tenant",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Tenant ID"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n  \"id\": 0,\n  \"jobId\": 0,\n  \"projectId\": 0,\n  \"name\": \"string\",\n  \"jobNumber\": \"string\",\n  \"status\": {\n    \"value\": 0,\n    \"name\": \"string\"\n  },\n  \"summary\": \"string\",\n  \"modifiedOn\": \"string\",\n  \"soldOn\": \"string\",\n  \"soldBy\": 0,\n  \"active\": true,\n  \"items\": [\n    {\n      \"id\": 0,\n      \"sku\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"displayName\": \"string\",\n        \"type\": \"string\",\n        \"soldHours\": 0,\n        \"generalLedgerAccountId\": 0,\n        \"generalLedgerAccountName\": \"string\",\n        \"modifiedOn\": \"string\"\n      },\n      \"skuAccount\": \"string\",\n      \"description\": \"string\",\n      \"qty\": 0,\n      \"unitRate\": 0,\n      \"total\": 0,\n      \"itemGroupName\": \"string\",\n      \"itemGroupRootId\": 0,\n      \"modifiedOn\": \"string\"\n    }\n  ],\n  \"externalLinks\": [\n    {\n      \"name\": \"string\",\n      \"url\": \"string\"\n    }\n  ]\n}"
+                                },
+                                {
+                                    "id": "c8ca30da-9c4b-4bd5-b78e-00b3f88994b9",
+                                    "name": "The request cannot be processed, check validation errors or request format",
+                                    "originalRequest": {
+                                        "method": "GET",
+                                        "header": [
+                                            {
+                                                "description": "Added as a part of security scheme: apikey",
+                                                "key": "ST-App-Key",
+                                                "value": "<API Key>"
+                                            }
+                                        ],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "tenant",
+                                                ":tenant",
+                                                "estimates",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Format - int64."
+                                                },
+                                                {
+                                                    "key": "tenant",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Tenant ID"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "Bad Request",
+                                    "code": 400,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 0,\n  \"traceId\": \"string\",\n  \"errors\": {},\n  \"data\": {}\n}"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Estimates_Update",
+                            "id": "c1850138-27e2-438a-8aa0-b937c0e43eec",
+                            "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                            },
+                            "request": {
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"name\": \"string\",\n  \"summary\": \"string\",\n  \"tax\": 0,\n  \"items\": [\n    {\n      \"id\": 0,\n      \"skuId\": 0,\n      \"skuName\": \"string\",\n      \"parentItemId\": 0,\n      \"description\": \"string\",\n      \"isAddOn\": true,\n      \"quantity\": 0,\n      \"unitPrice\": 0,\n      \"skipUpdatingMembershipPrices\": true,\n      \"itemGroupName\": \"string\",\n      \"itemGroupRootId\": 0\n    }\n  ],\n  \"externalLinks\": [\n    {\n      \"name\": \"string\",\n      \"url\": \"string\"\n    }\n  ]\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "tenant",
+                                        ":tenant",
+                                        "estimates",
+                                        ":id"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "id": "fdfcccb7-c002-49e5-8c3e-f44af5b88728",
+                                            "key": "id",
+                                            "value": "-2055877",
+                                            "description": "(Required) Format - int64."
+                                        },
+                                        {
+                                            "id": "11b9e3c5-6339-4755-88d7-66a83165c3e7",
+                                            "key": "tenant",
+                                            "value": "-2055877",
+                                            "description": "(Required) Tenant ID"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "0f7296b4-b0c6-4219-83be-b03813741a70",
+                                    "name": "The request has succeeded",
+                                    "originalRequest": {
+                                        "method": "PUT",
+                                        "header": [
+                                            {
+                                                "description": "Added as a part of security scheme: apikey",
+                                                "key": "ST-App-Key",
+                                                "value": "<API Key>"
+                                            }
+                                        ],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n  \"name\": \"string\",\n  \"summary\": \"string\",\n  \"tax\": 0,\n  \"items\": [\n    {\n      \"id\": 0,\n      \"skuId\": 0,\n      \"skuName\": \"string\",\n      \"parentItemId\": 0,\n      \"description\": \"string\",\n      \"isAddOn\": true,\n      \"quantity\": 0,\n      \"unitPrice\": 0,\n      \"skipUpdatingMembershipPrices\": true,\n      \"itemGroupName\": \"string\",\n      \"itemGroupRootId\": 0\n    }\n  ],\n  \"externalLinks\": [\n    {\n      \"name\": \"string\",\n      \"url\": \"string\"\n    }\n  ]\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "tenant",
+                                                ":tenant",
+                                                "estimates",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Format - int64."
+                                                },
+                                                {
+                                                    "key": "tenant",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Tenant ID"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n  \"id\": 0,\n  \"jobId\": 0,\n  \"projectId\": 0,\n  \"name\": \"string\",\n  \"jobNumber\": \"string\",\n  \"status\": {\n    \"value\": 0,\n    \"name\": \"string\"\n  },\n  \"summary\": \"string\",\n  \"modifiedOn\": \"string\",\n  \"soldOn\": \"string\",\n  \"soldBy\": 0,\n  \"active\": true,\n  \"items\": [\n    {\n      \"id\": 0,\n      \"sku\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"displayName\": \"string\",\n        \"type\": \"string\",\n        \"soldHours\": 0,\n        \"generalLedgerAccountId\": 0,\n        \"generalLedgerAccountName\": \"string\",\n        \"modifiedOn\": \"string\"\n      },\n      \"skuAccount\": \"string\",\n      \"description\": \"string\",\n      \"qty\": 0,\n      \"unitRate\": 0,\n      \"total\": 0,\n      \"itemGroupName\": \"string\",\n      \"itemGroupRootId\": 0,\n      \"modifiedOn\": \"string\"\n    }\n  ],\n  \"externalLinks\": [\n    {\n      \"name\": \"string\",\n      \"url\": \"string\"\n    }\n  ]\n}"
+                                },
+                                {
+                                    "id": "246cb293-8c73-47e5-9a82-deecc09f8ee8",
+                                    "name": "The request cannot be processed, check validation errors or request format",
+                                    "originalRequest": {
+                                        "method": "PUT",
+                                        "header": [
+                                            {
+                                                "description": "Added as a part of security scheme: apikey",
+                                                "key": "ST-App-Key",
+                                                "value": "<API Key>"
+                                            }
+                                        ],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n  \"name\": \"string\",\n  \"summary\": \"string\",\n  \"tax\": 0,\n  \"items\": [\n    {\n      \"id\": 0,\n      \"skuId\": 0,\n      \"skuName\": \"string\",\n      \"parentItemId\": 0,\n      \"description\": \"string\",\n      \"isAddOn\": true,\n      \"quantity\": 0,\n      \"unitPrice\": 0,\n      \"skipUpdatingMembershipPrices\": true,\n      \"itemGroupName\": \"string\",\n      \"itemGroupRootId\": 0\n    }\n  ],\n  \"externalLinks\": [\n    {\n      \"name\": \"string\",\n      \"url\": \"string\"\n    }\n  ]\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "tenant",
+                                                ":tenant",
+                                                "estimates",
+                                                ":id"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Format - int64."
+                                                },
+                                                {
+                                                    "key": "tenant",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Tenant ID"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "Bad Request",
+                                    "code": 400,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 0,\n  \"traceId\": \"string\",\n  \"errors\": {},\n  \"data\": {}\n}"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Estimates_Sell",
+                            "id": "9812365e-21b1-43b2-8e74-beebb92f21c8",
+                            "protocolProfileBehavior": {
+                                "disableBodyPruning": true
+                            },
+                            "request": {
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Content-Type",
+                                        "value": "application/json"
+                                    },
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"soldBy\": 0\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id/sell",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "tenant",
+                                        ":tenant",
+                                        "estimates",
+                                        ":id",
+                                        "sell"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "id": "5ee97f74-c5a9-446f-a791-80e994b89da1",
+                                            "key": "id",
+                                            "value": "-2055877",
+                                            "description": "(Required) Format - int64."
+                                        },
+                                        {
+                                            "id": "4e45ce63-4802-43ba-be6a-92224ad3a805",
+                                            "key": "tenant",
+                                            "value": "-2055877",
+                                            "description": "(Required) Tenant ID"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "8e2fed2d-5512-4d12-83b6-6f9d458198ca",
+                                    "name": "The request has succeeded",
+                                    "originalRequest": {
+                                        "method": "PUT",
+                                        "header": [
+                                            {
+                                                "description": "Added as a part of security scheme: apikey",
+                                                "key": "ST-App-Key",
+                                                "value": "<API Key>"
+                                            }
+                                        ],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n  \"soldBy\": 0\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id/sell",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "tenant",
+                                                ":tenant",
+                                                "estimates",
+                                                ":id",
+                                                "sell"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Format - int64."
+                                                },
+                                                {
+                                                    "key": "tenant",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Tenant ID"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n  \"id\": 0,\n  \"jobId\": 0,\n  \"projectId\": 0,\n  \"name\": \"string\",\n  \"jobNumber\": \"string\",\n  \"status\": {\n    \"value\": 0,\n    \"name\": \"string\"\n  },\n  \"summary\": \"string\",\n  \"modifiedOn\": \"string\",\n  \"soldOn\": \"string\",\n  \"soldBy\": 0,\n  \"active\": true,\n  \"items\": [\n    {\n      \"id\": 0,\n      \"sku\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"displayName\": \"string\",\n        \"type\": \"string\",\n        \"soldHours\": 0,\n        \"generalLedgerAccountId\": 0,\n        \"generalLedgerAccountName\": \"string\",\n        \"modifiedOn\": \"string\"\n      },\n      \"skuAccount\": \"string\",\n      \"description\": \"string\",\n      \"qty\": 0,\n      \"unitRate\": 0,\n      \"total\": 0,\n      \"itemGroupName\": \"string\",\n      \"itemGroupRootId\": 0,\n      \"modifiedOn\": \"string\"\n    }\n  ],\n  \"externalLinks\": [\n    {\n      \"name\": \"string\",\n      \"url\": \"string\"\n    }\n  ]\n}"
+                                },
+                                {
+                                    "id": "903921f2-e85e-4ff7-9814-7bd4f56ef7ed",
+                                    "name": "The request cannot be processed, check validation errors or request format",
+                                    "originalRequest": {
+                                        "method": "PUT",
+                                        "header": [
+                                            {
+                                                "description": "Added as a part of security scheme: apikey",
+                                                "key": "ST-App-Key",
+                                                "value": "<API Key>"
+                                            }
+                                        ],
+                                        "body": {
+                                            "mode": "raw",
+                                            "raw": "{\n  \"soldBy\": 0\n}",
+                                            "options": {
+                                                "raw": {
+                                                    "language": "json"
+                                                }
+                                            }
+                                        },
+                                        "url": {
+                                            "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id/sell",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "tenant",
+                                                ":tenant",
+                                                "estimates",
+                                                ":id",
+                                                "sell"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Format - int64."
+                                                },
+                                                {
+                                                    "key": "tenant",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Tenant ID"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "Bad Request",
+                                    "code": 400,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 0,\n  \"traceId\": \"string\",\n  \"errors\": {},\n  \"data\": {}\n}"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Estimates_Unsell",
+                            "id": "c8cefe35-67f6-4aaa-b0c3-353a90e2d856",
+                            "request": {
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id/unsell",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "tenant",
+                                        ":tenant",
+                                        "estimates",
+                                        ":id",
+                                        "unsell"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "id": "38d9cbba-d520-44ba-8ced-d1e489e3ef4c",
+                                            "key": "id",
+                                            "value": "-2055877",
+                                            "description": "(Required) Format - int64."
+                                        },
+                                        {
+                                            "id": "80716dfc-6bc3-4992-80b7-89f0e53ea0dd",
+                                            "key": "tenant",
+                                            "value": "-2055877",
+                                            "description": "(Required) Tenant ID"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "41494bbc-f002-4648-809a-d20aff347567",
+                                    "name": "The request has succeeded",
+                                    "originalRequest": {
+                                        "method": "PUT",
+                                        "header": [
+                                            {
+                                                "description": "Added as a part of security scheme: apikey",
+                                                "key": "ST-App-Key",
+                                                "value": "<API Key>"
+                                            }
+                                        ],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id/unsell",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "tenant",
+                                                ":tenant",
+                                                "estimates",
+                                                ":id",
+                                                "unsell"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Format - int64."
+                                                },
+                                                {
+                                                    "key": "tenant",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Tenant ID"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "text",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "text/plain"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": ""
+                                },
+                                {
+                                    "id": "9e69860b-0432-491e-aebb-60334ae4f04d",
+                                    "name": "The request cannot be processed, check validation errors or request format",
+                                    "originalRequest": {
+                                        "method": "PUT",
+                                        "header": [
+                                            {
+                                                "description": "Added as a part of security scheme: apikey",
+                                                "key": "ST-App-Key",
+                                                "value": "<API Key>"
+                                            }
+                                        ],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id/unsell",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "tenant",
+                                                ":tenant",
+                                                "estimates",
+                                                ":id",
+                                                "unsell"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Format - int64."
+                                                },
+                                                {
+                                                    "key": "tenant",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Tenant ID"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "Bad Request",
+                                    "code": 400,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 0,\n  \"traceId\": \"string\",\n  \"errors\": {},\n  \"data\": {}\n}"
+                                }
+                            ]
+                        },
+                        {
+                            "name": "Estimates_Dismiss",
+                            "id": "ad6ec8b1-45ea-465b-8d1c-05302fec2725",
+                            "request": {
+                                "method": "PUT",
+                                "header": [
+                                    {
+                                        "key": "Accept",
+                                        "value": "application/json"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id/dismiss",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "tenant",
+                                        ":tenant",
+                                        "estimates",
+                                        ":id",
+                                        "dismiss"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "id": "ecdd0a0a-d441-446d-8d09-fc3a3fb583bd",
+                                            "key": "id",
+                                            "value": "-2055877",
+                                            "description": "(Required) Format - int64."
+                                        },
+                                        {
+                                            "id": "1c1217cc-bea6-4c9f-9357-bfec31bd57e3",
+                                            "key": "tenant",
+                                            "value": "-2055877",
+                                            "description": "(Required) Tenant ID"
+                                        }
+                                    ]
+                                }
+                            },
+                            "response": [
+                                {
+                                    "id": "a2d5100d-7b46-4f84-beb3-e94e3af534c8",
+                                    "name": "The request has succeeded",
+                                    "originalRequest": {
+                                        "method": "PUT",
+                                        "header": [
+                                            {
+                                                "description": "Added as a part of security scheme: apikey",
+                                                "key": "ST-App-Key",
+                                                "value": "<API Key>"
+                                            }
+                                        ],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id/dismiss",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "tenant",
+                                                ":tenant",
+                                                "estimates",
+                                                ":id",
+                                                "dismiss"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Format - int64."
+                                                },
+                                                {
+                                                    "key": "tenant",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Tenant ID"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "OK",
+                                    "code": 200,
+                                    "_postman_previewlanguage": "text",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "text/plain"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": ""
+                                },
+                                {
+                                    "id": "546bafd1-f17b-42c9-98ff-d82a2ca3a4a4",
+                                    "name": "The request cannot be processed, check validation errors or request format",
+                                    "originalRequest": {
+                                        "method": "PUT",
+                                        "header": [
+                                            {
+                                                "description": "Added as a part of security scheme: apikey",
+                                                "key": "ST-App-Key",
+                                                "value": "<API Key>"
+                                            }
+                                        ],
+                                        "url": {
+                                            "raw": "{{baseUrl}}/tenant/:tenant/estimates/:id/dismiss",
+                                            "host": [
+                                                "{{baseUrl}}"
+                                            ],
+                                            "path": [
+                                                "tenant",
+                                                ":tenant",
+                                                "estimates",
+                                                ":id",
+                                                "dismiss"
+                                            ],
+                                            "variable": [
+                                                {
+                                                    "key": "id",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Format - int64."
+                                                },
+                                                {
+                                                    "key": "tenant",
+                                                    "value": "-2055877",
+                                                    "description": "(Required) Tenant ID"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "status": "Bad Request",
+                                    "code": 400,
+                                    "_postman_previewlanguage": "json",
+                                    "header": [
+                                        {
+                                            "key": "Content-Type",
+                                            "value": "application/json"
+                                        }
+                                    ],
+                                    "cookie": [],
+                                    "responseTime": null,
+                                    "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 0,\n  \"traceId\": \"string\",\n  \"errors\": {},\n  \"data\": {}\n}"
+                                }
+                            ]
+                        }
+                    ],
+                    "id": "a5dec41b-9a2a-4b55-b30c-b49b0082bf60"
+                },
+                {
+                    "name": "Estimates_GetList",
+                    "id": "0f10329b-47fa-4352-9ab9-cb79b229cc69",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/tenant/:tenant/estimates?jobId=15219557&projectId=15219557&jobNumber=laboris E&totalGreater=35812736.2939502&totalLess=35812736.2939502&soldById=15219557&soldByEmployeeId=15219557&ids=laboris E&page=15219557&pageSize=15219557&includeTotal=true&soldAfter=1977-12-04T06:12:34.614Z&soldBefore=1977-12-04T06:12:34.614Z&status=laboris E&active=True&orderBy=laboris E&orderByDirection=laboris E&createdBefore=1977-12-04T06:12:34.614Z&createdOnOrAfter=1977-12-04T06:12:34.614Z&modifiedBefore=1977-12-04T06:12:34.614Z&modifiedOnOrAfter=1977-12-04T06:12:34.614Z",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "tenant",
+                                ":tenant",
+                                "estimates"
+                            ],
+                            "query": [
+                                {
+                                    "key": "jobId",
+                                    "value": "15219557",
+                                    "description": "Format - int64."
+                                },
+                                {
+                                    "key": "projectId",
+                                    "value": "15219557",
+                                    "description": "Format - int64."
+                                },
+                                {
+                                    "key": "jobNumber",
+                                    "value": "laboris E"
+                                },
+                                {
+                                    "key": "totalGreater",
+                                    "value": "35812736.2939502",
+                                    "description": "Format - decimal."
+                                },
+                                {
+                                    "key": "totalLess",
+                                    "value": "35812736.2939502",
+                                    "description": "Format - decimal."
+                                },
+                                {
+                                    "key": "soldById",
+                                    "value": "15219557",
+                                    "description": "Format - int64."
+                                },
+                                {
+                                    "key": "soldByEmployeeId",
+                                    "value": "15219557",
+                                    "description": "Format - int64."
+                                },
+                                {
+                                    "key": "ids",
+                                    "value": "laboris E"
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "15219557",
+                                    "description": "Format - int32."
+                                },
+                                {
+                                    "key": "pageSize",
+                                    "value": "15219557",
+                                    "description": "Format - int32."
+                                },
+                                {
+                                    "key": "includeTotal",
+                                    "value": "true"
+                                },
+                                {
+                                    "key": "soldAfter",
+                                    "value": "1977-12-04T06:12:34.614Z",
+                                    "description": "Format - date-time (as date-time in RFC3339)."
+                                },
+                                {
+                                    "key": "soldBefore",
+                                    "value": "1977-12-04T06:12:34.614Z",
+                                    "description": "Format - date-time (as date-time in RFC3339)."
+                                },
+                                {
+                                    "key": "status",
+                                    "value": "laboris E"
+                                },
+                                {
+                                    "key": "active",
+                                    "value": "True",
+                                    "description": "Values: [True, Any, False]"
+                                },
+                                {
+                                    "key": "orderBy",
+                                    "value": "laboris E"
+                                },
+                                {
+                                    "key": "orderByDirection",
+                                    "value": "laboris E"
+                                },
+                                {
+                                    "key": "createdBefore",
+                                    "value": "1977-12-04T06:12:34.614Z",
+                                    "description": "Format - date-time (as date-time in RFC3339)."
+                                },
+                                {
+                                    "key": "createdOnOrAfter",
+                                    "value": "1977-12-04T06:12:34.614Z",
+                                    "description": "Format - date-time (as date-time in RFC3339)."
+                                },
+                                {
+                                    "key": "modifiedBefore",
+                                    "value": "1977-12-04T06:12:34.614Z",
+                                    "description": "Format - date-time (as date-time in RFC3339)."
+                                },
+                                {
+                                    "key": "modifiedOnOrAfter",
+                                    "value": "1977-12-04T06:12:34.614Z",
+                                    "description": "Format - date-time (as date-time in RFC3339)."
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "id": "41c41d6d-f9f5-4358-ade9-3aa5c874c718",
+                                    "key": "tenant",
+                                    "value": "-2055877",
+                                    "description": "(Required) Tenant ID"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "07590a09-65d5-408d-aeb5-16d9fb8e1c40",
+                            "name": "The request has succeeded",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: apikey",
+                                        "key": "ST-App-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/tenant/:tenant/estimates?jobId=15219557&projectId=15219557&jobNumber=laboris E&totalGreater=35812736.2939502&totalLess=35812736.2939502&soldById=15219557&soldByEmployeeId=15219557&ids=laboris E&page=15219557&pageSize=15219557&includeTotal=true&soldAfter=1977-12-04T06:12:34.614Z&soldBefore=1977-12-04T06:12:34.614Z&status=laboris E&active=True&orderBy=laboris E&orderByDirection=laboris E&createdBefore=1977-12-04T06:12:34.614Z&createdOnOrAfter=1977-12-04T06:12:34.614Z&modifiedBefore=1977-12-04T06:12:34.614Z&modifiedOnOrAfter=1977-12-04T06:12:34.614Z",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "tenant",
+                                        ":tenant",
+                                        "estimates"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "jobId",
+                                            "value": "15219557"
+                                        },
+                                        {
+                                            "key": "projectId",
+                                            "value": "15219557"
+                                        },
+                                        {
+                                            "key": "jobNumber",
+                                            "value": "laboris E"
+                                        },
+                                        {
+                                            "key": "totalGreater",
+                                            "value": "35812736.2939502"
+                                        },
+                                        {
+                                            "key": "totalLess",
+                                            "value": "35812736.2939502"
+                                        },
+                                        {
+                                            "key": "soldById",
+                                            "value": "15219557"
+                                        },
+                                        {
+                                            "key": "soldByEmployeeId",
+                                            "value": "15219557"
+                                        },
+                                        {
+                                            "key": "ids",
+                                            "value": "laboris E"
+                                        },
+                                        {
+                                            "key": "page",
+                                            "value": "15219557"
+                                        },
+                                        {
+                                            "key": "pageSize",
+                                            "value": "15219557"
+                                        },
+                                        {
+                                            "key": "includeTotal",
+                                            "value": "true"
+                                        },
+                                        {
+                                            "key": "soldAfter",
+                                            "value": "1977-12-04T06:12:34.614Z"
+                                        },
+                                        {
+                                            "key": "soldBefore",
+                                            "value": "1977-12-04T06:12:34.614Z"
+                                        },
+                                        {
+                                            "key": "status",
+                                            "value": "laboris E"
+                                        },
+                                        {
+                                            "key": "active",
+                                            "value": "True"
+                                        },
+                                        {
+                                            "key": "orderBy",
+                                            "value": "laboris E"
+                                        },
+                                        {
+                                            "key": "orderByDirection",
+                                            "value": "laboris E"
+                                        },
+                                        {
+                                            "key": "createdBefore",
+                                            "value": "1977-12-04T06:12:34.614Z"
+                                        },
+                                        {
+                                            "key": "createdOnOrAfter",
+                                            "value": "1977-12-04T06:12:34.614Z"
+                                        },
+                                        {
+                                            "key": "modifiedBefore",
+                                            "value": "1977-12-04T06:12:34.614Z"
+                                        },
+                                        {
+                                            "key": "modifiedOnOrAfter",
+                                            "value": "1977-12-04T06:12:34.614Z"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "tenant",
+                                            "value": "-2055877",
+                                            "description": "(Required) Tenant ID"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n  \"page\": 0,\n  \"pageSize\": 0,\n  \"hasMore\": true,\n  \"totalCount\": 0,\n  \"data\": [\n    {\n      \"id\": 0,\n      \"jobId\": 0,\n      \"projectId\": 0,\n      \"name\": \"string\",\n      \"jobNumber\": \"string\",\n      \"status\": {\n        \"value\": 0,\n        \"name\": \"string\"\n      },\n      \"summary\": \"string\",\n      \"modifiedOn\": \"string\",\n      \"soldOn\": \"string\",\n      \"soldBy\": 0,\n      \"active\": true,\n      \"items\": [\n        {\n          \"id\": 0,\n          \"sku\": {\n            \"id\": 0,\n            \"name\": \"string\",\n            \"displayName\": \"string\",\n            \"type\": \"string\",\n            \"soldHours\": 0,\n            \"generalLedgerAccountId\": 0,\n            \"generalLedgerAccountName\": \"string\",\n            \"modifiedOn\": \"string\"\n          },\n          \"skuAccount\": \"string\",\n          \"description\": \"string\",\n          \"qty\": 0,\n          \"unitRate\": 0,\n          \"total\": 0,\n          \"itemGroupName\": \"string\",\n          \"itemGroupRootId\": 0,\n          \"modifiedOn\": \"string\"\n        }\n      ],\n      \"externalLinks\": [\n        {\n          \"name\": \"string\",\n          \"url\": \"string\"\n        }\n      ]\n    }\n  ]\n}"
+                        },
+                        {
+                            "id": "b91fb3b9-25c0-46f2-b8bc-63ad12fcd1a4",
+                            "name": "The request cannot be processed, check validation errors or request format",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: apikey",
+                                        "key": "ST-App-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/tenant/:tenant/estimates?jobId=15219557&projectId=15219557&jobNumber=laboris E&totalGreater=35812736.2939502&totalLess=35812736.2939502&soldById=15219557&soldByEmployeeId=15219557&ids=laboris E&page=15219557&pageSize=15219557&includeTotal=true&soldAfter=1977-12-04T06:12:34.614Z&soldBefore=1977-12-04T06:12:34.614Z&status=laboris E&active=True&orderBy=laboris E&orderByDirection=laboris E&createdBefore=1977-12-04T06:12:34.614Z&createdOnOrAfter=1977-12-04T06:12:34.614Z&modifiedBefore=1977-12-04T06:12:34.614Z&modifiedOnOrAfter=1977-12-04T06:12:34.614Z",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "tenant",
+                                        ":tenant",
+                                        "estimates"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "jobId",
+                                            "value": "15219557"
+                                        },
+                                        {
+                                            "key": "projectId",
+                                            "value": "15219557"
+                                        },
+                                        {
+                                            "key": "jobNumber",
+                                            "value": "laboris E"
+                                        },
+                                        {
+                                            "key": "totalGreater",
+                                            "value": "35812736.2939502"
+                                        },
+                                        {
+                                            "key": "totalLess",
+                                            "value": "35812736.2939502"
+                                        },
+                                        {
+                                            "key": "soldById",
+                                            "value": "15219557"
+                                        },
+                                        {
+                                            "key": "soldByEmployeeId",
+                                            "value": "15219557"
+                                        },
+                                        {
+                                            "key": "ids",
+                                            "value": "laboris E"
+                                        },
+                                        {
+                                            "key": "page",
+                                            "value": "15219557"
+                                        },
+                                        {
+                                            "key": "pageSize",
+                                            "value": "15219557"
+                                        },
+                                        {
+                                            "key": "includeTotal",
+                                            "value": "true"
+                                        },
+                                        {
+                                            "key": "soldAfter",
+                                            "value": "1977-12-04T06:12:34.614Z"
+                                        },
+                                        {
+                                            "key": "soldBefore",
+                                            "value": "1977-12-04T06:12:34.614Z"
+                                        },
+                                        {
+                                            "key": "status",
+                                            "value": "laboris E"
+                                        },
+                                        {
+                                            "key": "active",
+                                            "value": "True"
+                                        },
+                                        {
+                                            "key": "orderBy",
+                                            "value": "laboris E"
+                                        },
+                                        {
+                                            "key": "orderByDirection",
+                                            "value": "laboris E"
+                                        },
+                                        {
+                                            "key": "createdBefore",
+                                            "value": "1977-12-04T06:12:34.614Z"
+                                        },
+                                        {
+                                            "key": "createdOnOrAfter",
+                                            "value": "1977-12-04T06:12:34.614Z"
+                                        },
+                                        {
+                                            "key": "modifiedBefore",
+                                            "value": "1977-12-04T06:12:34.614Z"
+                                        },
+                                        {
+                                            "key": "modifiedOnOrAfter",
+                                            "value": "1977-12-04T06:12:34.614Z"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "tenant",
+                                            "value": "-2055877",
+                                            "description": "(Required) Tenant ID"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "Bad Request",
+                            "code": 400,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 0,\n  \"traceId\": \"string\",\n  \"errors\": {},\n  \"data\": {}\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Estimates_Create",
+                    "id": "3393d146-7071-4201-b102-8b4e4cf275f6",
+                    "protocolProfileBehavior": {
+                        "disableBodyPruning": true
+                    },
+                    "request": {
+                        "method": "POST",
+                        "header": [
+                            {
+                                "key": "Content-Type",
+                                "value": "application/json"
+                            },
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "body": {
+                            "mode": "raw",
+                            "raw": "{\n  \"name\": \"string\",\n  \"summary\": \"string\",\n  \"tax\": 0,\n  \"items\": [\n    {\n      \"id\": 0,\n      \"skuId\": 0,\n      \"skuName\": \"string\",\n      \"parentItemId\": 0,\n      \"description\": \"string\",\n      \"isAddOn\": true,\n      \"quantity\": 0,\n      \"unitPrice\": 0,\n      \"skipUpdatingMembershipPrices\": true,\n      \"itemGroupName\": \"string\",\n      \"itemGroupRootId\": 0\n    }\n  ],\n  \"externalLinks\": [\n    {\n      \"name\": \"string\",\n      \"url\": \"string\"\n    }\n  ],\n  \"jobId\": 0\n}",
+                            "options": {
+                                "raw": {
+                                    "language": "json"
+                                }
+                            }
+                        },
+                        "url": {
+                            "raw": "{{baseUrl}}/tenant/:tenant/estimates",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "tenant",
+                                ":tenant",
+                                "estimates"
+                            ],
+                            "variable": [
+                                {
+                                    "id": "7da4d67a-1b23-4333-8348-7ee547279438",
+                                    "key": "tenant",
+                                    "value": "-2055877",
+                                    "description": "(Required) Tenant ID"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "9c9677a8-e118-4ff3-9f2c-17787b39ec17",
+                            "name": "The request has succeeded",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: apikey",
+                                        "key": "ST-App-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"name\": \"string\",\n  \"summary\": \"string\",\n  \"tax\": 0,\n  \"items\": [\n    {\n      \"id\": 0,\n      \"skuId\": 0,\n      \"skuName\": \"string\",\n      \"parentItemId\": 0,\n      \"description\": \"string\",\n      \"isAddOn\": true,\n      \"quantity\": 0,\n      \"unitPrice\": 0,\n      \"skipUpdatingMembershipPrices\": true,\n      \"itemGroupName\": \"string\",\n      \"itemGroupRootId\": 0\n    }\n  ],\n  \"externalLinks\": [\n    {\n      \"name\": \"string\",\n      \"url\": \"string\"\n    }\n  ],\n  \"jobId\": 0\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{baseUrl}}/tenant/:tenant/estimates",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "tenant",
+                                        ":tenant",
+                                        "estimates"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "tenant",
+                                            "value": "-2055877",
+                                            "description": "(Required) Tenant ID"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n  \"id\": 0,\n  \"jobId\": 0,\n  \"projectId\": 0,\n  \"name\": \"string\",\n  \"jobNumber\": \"string\",\n  \"status\": {\n    \"value\": 0,\n    \"name\": \"string\"\n  },\n  \"summary\": \"string\",\n  \"modifiedOn\": \"string\",\n  \"soldOn\": \"string\",\n  \"soldBy\": 0,\n  \"active\": true,\n  \"items\": [\n    {\n      \"id\": 0,\n      \"sku\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"displayName\": \"string\",\n        \"type\": \"string\",\n        \"soldHours\": 0,\n        \"generalLedgerAccountId\": 0,\n        \"generalLedgerAccountName\": \"string\",\n        \"modifiedOn\": \"string\"\n      },\n      \"skuAccount\": \"string\",\n      \"description\": \"string\",\n      \"qty\": 0,\n      \"unitRate\": 0,\n      \"total\": 0,\n      \"itemGroupName\": \"string\",\n      \"itemGroupRootId\": 0,\n      \"modifiedOn\": \"string\"\n    }\n  ],\n  \"externalLinks\": [\n    {\n      \"name\": \"string\",\n      \"url\": \"string\"\n    }\n  ]\n}"
+                        },
+                        {
+                            "id": "a04719f1-927f-488a-8d26-a572113d908c",
+                            "name": "The request cannot be processed, check validation errors or request format",
+                            "originalRequest": {
+                                "method": "POST",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: apikey",
+                                        "key": "ST-App-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
+                                "body": {
+                                    "mode": "raw",
+                                    "raw": "{\n  \"name\": \"string\",\n  \"summary\": \"string\",\n  \"tax\": 0,\n  \"items\": [\n    {\n      \"id\": 0,\n      \"skuId\": 0,\n      \"skuName\": \"string\",\n      \"parentItemId\": 0,\n      \"description\": \"string\",\n      \"isAddOn\": true,\n      \"quantity\": 0,\n      \"unitPrice\": 0,\n      \"skipUpdatingMembershipPrices\": true,\n      \"itemGroupName\": \"string\",\n      \"itemGroupRootId\": 0\n    }\n  ],\n  \"externalLinks\": [\n    {\n      \"name\": \"string\",\n      \"url\": \"string\"\n    }\n  ],\n  \"jobId\": 0\n}",
+                                    "options": {
+                                        "raw": {
+                                            "language": "json"
+                                        }
+                                    }
+                                },
+                                "url": {
+                                    "raw": "{{baseUrl}}/tenant/:tenant/estimates",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "tenant",
+                                        ":tenant",
+                                        "estimates"
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "tenant",
+                                            "value": "-2055877",
+                                            "description": "(Required) Tenant ID"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "Bad Request",
+                            "code": 400,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 0,\n  \"traceId\": \"string\",\n  \"errors\": {},\n  \"data\": {}\n}"
+                        }
+                    ]
+                },
+                {
+                    "name": "Estimates_GetItems",
+                    "id": "12fb269b-89a2-4d16-b4b5-3c1bf55c0fad",
+                    "request": {
+                        "method": "GET",
+                        "header": [
+                            {
+                                "key": "Accept",
+                                "value": "application/json"
+                            }
+                        ],
+                        "url": {
+                            "raw": "{{baseUrl}}/tenant/:tenant/estimates/items?estimateId=15219557&ids=laboris E&active=True&createdBefore=1977-12-04T06:12:34.614Z&createdOnOrAfter=1977-12-04T06:12:34.614Z&page=15219557&pageSize=15219557&includeTotal=true",
+                            "host": [
+                                "{{baseUrl}}"
+                            ],
+                            "path": [
+                                "tenant",
+                                ":tenant",
+                                "estimates",
+                                "items"
+                            ],
+                            "query": [
+                                {
+                                    "key": "estimateId",
+                                    "value": "15219557",
+                                    "description": "Format - int64."
+                                },
+                                {
+                                    "key": "ids",
+                                    "value": "laboris E"
+                                },
+                                {
+                                    "key": "active",
+                                    "value": "True",
+                                    "description": "Values: [True, Any, False]"
+                                },
+                                {
+                                    "key": "createdBefore",
+                                    "value": "1977-12-04T06:12:34.614Z",
+                                    "description": "Format - date-time (as date-time in RFC3339)."
+                                },
+                                {
+                                    "key": "createdOnOrAfter",
+                                    "value": "1977-12-04T06:12:34.614Z",
+                                    "description": "Format - date-time (as date-time in RFC3339)."
+                                },
+                                {
+                                    "key": "page",
+                                    "value": "15219557",
+                                    "description": "Format - int32."
+                                },
+                                {
+                                    "key": "pageSize",
+                                    "value": "15219557",
+                                    "description": "Format - int32."
+                                },
+                                {
+                                    "key": "includeTotal",
+                                    "value": "true"
+                                }
+                            ],
+                            "variable": [
+                                {
+                                    "id": "c8887109-7d9a-428b-ab91-4c159a08c017",
+                                    "key": "tenant",
+                                    "value": "-2055877",
+                                    "description": "(Required) Tenant ID"
+                                }
+                            ]
+                        }
+                    },
+                    "response": [
+                        {
+                            "id": "672a1c10-df4e-418a-8d52-7d807f8f97db",
+                            "name": "The request has succeeded",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: apikey",
+                                        "key": "ST-App-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/tenant/:tenant/estimates/items?estimateId=15219557&ids=laboris E&active=True&createdBefore=1977-12-04T06:12:34.614Z&createdOnOrAfter=1977-12-04T06:12:34.614Z&page=15219557&pageSize=15219557&includeTotal=true",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "tenant",
+                                        ":tenant",
+                                        "estimates",
+                                        "items"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "estimateId",
+                                            "value": "15219557"
+                                        },
+                                        {
+                                            "key": "ids",
+                                            "value": "laboris E"
+                                        },
+                                        {
+                                            "key": "active",
+                                            "value": "True"
+                                        },
+                                        {
+                                            "key": "createdBefore",
+                                            "value": "1977-12-04T06:12:34.614Z"
+                                        },
+                                        {
+                                            "key": "createdOnOrAfter",
+                                            "value": "1977-12-04T06:12:34.614Z"
+                                        },
+                                        {
+                                            "key": "page",
+                                            "value": "15219557"
+                                        },
+                                        {
+                                            "key": "pageSize",
+                                            "value": "15219557"
+                                        },
+                                        {
+                                            "key": "includeTotal",
+                                            "value": "true"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "tenant",
+                                            "value": "-2055877",
+                                            "description": "(Required) Tenant ID"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "OK",
+                            "code": 200,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n  \"page\": 0,\n  \"pageSize\": 0,\n  \"hasMore\": true,\n  \"totalCount\": 0,\n  \"data\": [\n    {\n      \"id\": 0,\n      \"sku\": {\n        \"id\": 0,\n        \"name\": \"string\",\n        \"displayName\": \"string\",\n        \"type\": \"string\",\n        \"soldHours\": 0,\n        \"generalLedgerAccountId\": 0,\n        \"generalLedgerAccountName\": \"string\",\n        \"modifiedOn\": \"string\"\n      },\n      \"skuAccount\": \"string\",\n      \"description\": \"string\",\n      \"qty\": 0,\n      \"unitRate\": 0,\n      \"total\": 0,\n      \"itemGroupName\": \"string\",\n      \"itemGroupRootId\": 0,\n      \"modifiedOn\": \"string\"\n    }\n  ]\n}"
+                        },
+                        {
+                            "id": "3c7ef6b1-113d-4a0e-b5c1-4b0427e28b31",
+                            "name": "The request cannot be processed, check validation errors or request format",
+                            "originalRequest": {
+                                "method": "GET",
+                                "header": [
+                                    {
+                                        "description": "Added as a part of security scheme: apikey",
+                                        "key": "ST-App-Key",
+                                        "value": "<API Key>"
+                                    }
+                                ],
+                                "url": {
+                                    "raw": "{{baseUrl}}/tenant/:tenant/estimates/items?estimateId=15219557&ids=laboris E&active=True&createdBefore=1977-12-04T06:12:34.614Z&createdOnOrAfter=1977-12-04T06:12:34.614Z&page=15219557&pageSize=15219557&includeTotal=true",
+                                    "host": [
+                                        "{{baseUrl}}"
+                                    ],
+                                    "path": [
+                                        "tenant",
+                                        ":tenant",
+                                        "estimates",
+                                        "items"
+                                    ],
+                                    "query": [
+                                        {
+                                            "key": "estimateId",
+                                            "value": "15219557"
+                                        },
+                                        {
+                                            "key": "ids",
+                                            "value": "laboris E"
+                                        },
+                                        {
+                                            "key": "active",
+                                            "value": "True"
+                                        },
+                                        {
+                                            "key": "createdBefore",
+                                            "value": "1977-12-04T06:12:34.614Z"
+                                        },
+                                        {
+                                            "key": "createdOnOrAfter",
+                                            "value": "1977-12-04T06:12:34.614Z"
+                                        },
+                                        {
+                                            "key": "page",
+                                            "value": "15219557"
+                                        },
+                                        {
+                                            "key": "pageSize",
+                                            "value": "15219557"
+                                        },
+                                        {
+                                            "key": "includeTotal",
+                                            "value": "true"
+                                        }
+                                    ],
+                                    "variable": [
+                                        {
+                                            "key": "tenant",
+                                            "value": "-2055877",
+                                            "description": "(Required) Tenant ID"
+                                        }
+                                    ]
+                                }
+                            },
+                            "status": "Bad Request",
+                            "code": 400,
+                            "_postman_previewlanguage": "json",
+                            "header": [
+                                {
+                                    "key": "Content-Type",
+                                    "value": "application/json"
+                                }
+                            ],
+                            "cookie": [],
+                            "responseTime": null,
+                            "body": "{\n  \"type\": \"string\",\n  \"title\": \"string\",\n  \"status\": 0,\n  \"traceId\": \"string\",\n  \"errors\": {},\n  \"data\": {}\n}"
+                        }
+                    ]
+                }
+            ],
+            "id": "3c2f7151-b9d9-41d3-a20c-aa2c5063b051"
+        }
+    ],
+    "auth": {
+        "type": "apikey",
+        "apikey": [
+            {
+                "key": "key",
+                "value": "ST-App-Key",
+                "type": "string"
+            },
+            {
+                "key": "value",
+                "value": "<API Key>",
+                "type": "string"
+            },
+            {
+                "key": "in",
+                "value": "header",
+                "type": "string"
+            }
+        ]
+    },
+    "variable": [
+        {
+            "id": "54ce8b11-deb8-462f-86d0-4f36f31cf25b",
+            "key": "baseUrl",
+            "value": "https://api-integration.servicetitan.io/sales/v2",
+            "type": "string"
+        }
+    ]
+}
